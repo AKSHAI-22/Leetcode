@@ -1,0 +1,8 @@
+class Solution(object):
+    def digitCount(self, num):
+        for i in range(len(num)):
+            expected_count = int(num[i])             # What it says the count should be
+            actual_count = num.count(str(i))         # Actual count of digit i in the string
+            if expected_count != actual_count:
+                return False
+        return True
